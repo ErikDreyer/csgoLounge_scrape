@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# API parser for csgo data
 import apiSQL
 
 
