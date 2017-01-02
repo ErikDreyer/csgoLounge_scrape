@@ -61,9 +61,21 @@ def main():
     with open("settings.txt", "+r") as settings_file:
         prev_match = settings_file.readline()
 
+<<<<<<< HEAD
     text = sql_writer.load_data_from_file()
     matches = text.split(';')
     # cursor = sql_writer.connection.cursor()
+=======
+        print("> Starting SQL writer...")
+        
+        try:
+                sql_host = "127.0.0.1"
+                conn = pymysql.connect(host=sql_host, port=3306, user="admin", passwd="pwd", db="csgoData")
+                print("> Connection to database successful...")
+        except RuntimeError:
+                print("> Connection failed, quitting")
+                sys.exit()
+>>>>>>> 9b5e8b2a4bbeca4cd4a48da1f33cfb7b82baa37a
 
     for match in matches:
         if match:
