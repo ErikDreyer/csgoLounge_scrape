@@ -7,6 +7,7 @@ this file seems to be a json format
 
 import json
 from collections import OrderedDict
+import sys
 
 
 class Parse:
@@ -91,6 +92,9 @@ class Parse:
 
         with open(self.output_file, 'w') as f_obj:
             json.dump(parsed_data, f_obj)
+
+        print('> Match data parsed and written to: ' + self.output_file)
+        sys.exit()
 
 
 class Match:

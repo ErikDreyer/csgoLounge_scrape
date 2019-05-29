@@ -70,7 +70,8 @@ def main():
     url = 'https://csgolounge.com/api/matches'
     file_name = 'rawData.json'
     scrape = Scrape(url, file_name)
-    scrape.print_url_for_testing()
+    scrape.write_url_to_json()
+   # scrape.print_url_for_testing()
 
 
 if __name__ == "__main__":

@@ -1,0 +1,17 @@
+    for match in matches:
+            # matchID
+
+
+            match = Match(match_id, date, time, team_a, team_b, winner, event, closed)
+
+           # if int(match_id) > int(prev_match):
+            if True:
+                sql = """INSERT INTO matches(matchID,matchDate,matchTime,teamA,teamB,winner,eventName,closed)
+                VALUES(%s,'%s','%s',"%s","%s","%s","%s",%s);""" % \
+                        (match.match_id, match.date, match.time, match.team_a, match.team_b, match.winner, match.event, match.closed)
+                #cursor.execute(sql)
+                print(sql)
+
+        # if int(prev_match) < int(match.match_id):
+       #      settings_file.seek(0)
+        #     settings_file.write(match.match_id)
